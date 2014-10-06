@@ -1,0 +1,29 @@
+{
+  "name": "redis-pubsubber",
+  "version": "0.0.0",
+  "description": "Redis pub/sub channel wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peteruithoven/redis-pubsubber.git"
+  },
+  "keywords": [
+    "redis",
+    "pub",
+    "sub",
+    "cluster"
+  ],
+  "author": "Peter Uithoven",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peteruithoven/redis-pubsubber/issues"
+  },
+  "homepage": "https://github.com/peteruithoven/redis-pubsubber",
+  "dependencies": {
+    "debug": "^2.0.0",
+    "redis": "^0.12.1"
+  }
+}
