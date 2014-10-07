@@ -1,7 +1,7 @@
 var redis = require('redis');
 var util = require("util");
 var EventEmitter = require("events").EventEmitter;
-var debug = require('debug')('redis-pubsub');
+var debug = require('debug')('redis-pubsubber');
 var EVENT_MSG = "event";
 var ACK_MSG = "ack";
 var callbackIDCounter = 0;
@@ -23,7 +23,7 @@ function RedisPubSub(prefix,port,host) {
     var channel = new Channel(prefix+name,pub,sub);
     channel.on('error',onRedisError);
     return channel;
-  }
+  };
 }
 util.inherits(RedisPubSub, EventEmitter);
 
