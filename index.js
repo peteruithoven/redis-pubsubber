@@ -14,6 +14,7 @@ function RedisPubSub(prefix,port,host) {
   var _self = this;
   var pub = redis.createClient(port,host);
   var sub = redis.createClient(port,host);
+  sub.setMaxListeners(50);
   pub.on('error',onRedisError);
   sub.on('error',onRedisError);
   function onRedisError(err){
