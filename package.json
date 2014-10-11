@@ -1,6 +1,6 @@
 {
   "name": "redis-pubsubber",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Redis pub/sub channel wrapper",
   "main": "index.js",
   "scripts": {
