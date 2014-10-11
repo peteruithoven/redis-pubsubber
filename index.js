@@ -85,5 +85,8 @@ function Channel(name,pub,sub) {
       if(err !== null) _self.emit("error",err);
     });
   };
+  this.destroy = function() {
+    sub.unsubscribe(name);
+  };
 }
 util.inherits(Channel, EventEmitter);
