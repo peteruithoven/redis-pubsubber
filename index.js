@@ -44,7 +44,9 @@ function Channel(name,pub,sub) {
     switch(packet.type){
       case EVENT_MSG:
         data.unshift("message"); // add event type in front
-        data.push(eventCallback); // add callback to end
+        if(callbackID !== undefined) {
+          data.push(eventCallback); // add callback to end
+        }
         _self.emit.apply(_self,data);
 
         function eventCallback() {
